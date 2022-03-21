@@ -1,94 +1,110 @@
 /*Colores*/
-* {
-  padding: 0;
-  margin: 0; }
-
-.body {
-  background-color: #fffef5;
-  height: 100%;
-  width: 100%; }
-
-.body1 {
-  background-color: #fffef5;
-  height: 100%;
-  width: 100%; }
-
-.grilla1 {
-  display: grid;
-  grid-template-columns: row;
-  grid-template-areas: "logo1 logo2";
-  background-color: #fffef5; }
-
+/*Fuentes*/
+/*color*/
 .grilla_nosotros {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "titulonosotros titulonosotros" "img_nosotros2 texto_nosotros2" "img_nosotros1 texto_nosotros1" "img_nosotros3 texto_nosotros3";
   background-color: #fffef5; }
 
-.menunavegacion {
-  margin-top: 5%;
-  margin-right: 30%;
-  background-color: #fffef5; }
-
 .titulonosotros {
-  grid-area: titulonosotros;
-  text-align: center;
-  width: 100%;
-  color: #c98a8a;
-  font-size: 80%;
-  font-family: 'Old Standard TT', serif;
-  background-color: #fffef5;
-  margin-top: 2%;
-  margin-bottom: 2%; }
+  grid-area: titulonosotros; }
 
 .texto_nosotros2 {
   grid-area: texto_nosotros2;
-  text-align: center;
   width: 100%;
-  color: #fac039;
-  font-size: 130%;
-  font-family: 'Old Standard TT', serif;
-  margin-top: 5%;
+  color: rgba(248, 104, 20, 0.842);
+  font-size: 90%;
+  font-family: "Old Standard TT", serif;
   margin-right: 10%; }
 
 .img_nosotros2 {
   grid-area: img_nosotros2;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 3%; }
+
+.img_actividades {
   width: 80%;
-  margin-left: 10%; }
+  margin-top: 5%;
+  margin-left: 7%; }
+
+.texto_actividades {
+  margin-top: 30%;
+  margin-right: 10%;
+  animation-duration: 3s;
+  animation-name: slidein; }
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; }
+  to {
+    margin-left: 0%;
+    width: 100%; } }
 
 .texto_nosotros1 {
   grid-area: texto_nosotros1;
   text-align: center;
-  width: 100%;
-  color: #fac039;
-  font-size: 130%;
-  font-family: 'Old Standard TT', serif;
-  margin-top: 15%; }
+  width: 90%;
+  color: rgba(248, 104, 20, 0.842);
+  font-size: 110%;
+  font-family: "Old Standard TT", serif;
+  margin-top: 10%; }
 
 .img_nosotros1 {
   grid-area: img_nosotros1;
-  width: 80%;
-  margin-left: 10%;
+  width: 60%;
+  margin-left: 20%;
   margin-top: 5%; }
 
 .texto_nosotros3 {
   grid-area: texto_nosotros1;
   text-align: center;
-  width: 100%;
-  color: #fac039;
-  font-size: 130%;
-  font-family: 'Old Standard TT', serif;
+  width: 90%;
+  color: rgba(248, 104, 20, 0.842);
+  font-size: 110%;
+  font-family: "Old Standard TT", serif;
   margin-top: 20%; }
 
 .img_nosotros3 {
   grid-area: img_nosotros1;
-  width: 80%;
-  margin-left: 10%;
+  width: 60%;
+  margin-left: 20%;
   margin-top: 5%; }
 
 .grillafotos {
   padding-left: 10%;
   background-color: #fffef5; }
+
+/*anidaciones*/
+header h1 {
+  color: #c98a8a;
+  font-size: 80%;
+  font-family: "Old Standard TT", serif;
+  font-size: 210%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center; }
+
+header h2 {
+  color: #c98a8a;
+  font-size: 80%;
+  font-family: "Old Standard TT", serif;
+  font-size: 180%;
+  text-align: center; }
+
+header p {
+  color: rgba(248, 104, 20, 0.842);
+  font-family: "Old Standard TT", serif;
+  font-size: 130%;
+  text-align: center; }
+
+.frasepresentacion {
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%; }
 
 .bloque2 {
   grid-area: bloque2; }
@@ -97,50 +113,9 @@
   grid-area: bloque3; }
   .bloque3__fraseindex1 {
     text-align: center;
-    font-style: italic;
-    color: #fac039;
+    font-style: "Old Standard TT", serif;
+    color: rgba(248, 104, 20, 0.842);
     font-size: 110%; }
-
-.redessociales {
-  width: 3%; }
-
-.redessociales2 {
-  width: 4%; }
-
-.redessociales3 {
-  width: 4%; }
-
-.ul1 {
-  list-style: none; }
-
-.ul2 {
-  list-style: none; }
-
-.ul3 {
-  list-style: none; }
-
-.ul1:hover {
-  transform: translate(10px); }
-
-.ul2:hover {
-  transform: translate(10px); }
-
-.ul3:hover {
-  transform: translate(10px); }
-
-.ulredes {
-  margin-top: 1%;
-  margin-left: none; }
-
-.portada {
-  width: 28%;
-  margin-left: 35%; }
-
-.fraseindex1 {
-  text-align: center;
-  font-style: italic;
-  color: #fac039;
-  font-size: 110%; }
 
 .btn-primary {
   margin-top: 1%; }
@@ -198,9 +173,11 @@
 
 .descripcionyoga {
   text-align: center;
-  font-style: italic;
-  color: #fac039;
-  font-size: 100%; }
+  font-style: "Old Standard TT", serif;
+  color: rgba(248, 104, 20, 0.842);
+  font-size: 100%;
+  margin-left: 20%;
+  margin-right: 20%; }
 
 .descripcionyoga {
   animation-duration: 3s;
@@ -216,8 +193,44 @@
 
 .piefotos {
   text-align: center;
-  font-style: italic;
-  color: #35290e; }
+  font-style: "Old Standard TT", serif;
+  color: rgba(248, 104, 20, 0.842); }
+
+#carouselExampleControls {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+  margin-bottom: 5%; }
+
+.titulogaleria {
+  grid-area: texto_nosotros1; }
+
+.formulario {
+  width: 50%;
+  margin-left: 5%;
+  margin-top: 4%;
+  margin-bottom: 8%; }
+
+.titulocontacto {
+  grid-area: texto_nosotros1; }
+
+.tablaHorarios {
+  border: 20%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-left: 32%;
+  text-align: center;
+  border-spacing: 10px;
+  border-collapse: separate; }
+
+.filas_columnas {
+  color: #c98a8a;
+  font-family: "Old Standard TT", serif;
+  font-size: 120%; }
+
+td {
+  font-family: "Old Standard TT", serif;
+  color: rgba(248, 104, 20, 0.842); }
 
 .footer {
   display: grid;
@@ -243,6 +256,34 @@
   height: 30%;
   margin-top: 10%; }
 
+.redessociales {
+  width: 3%; }
+
+.redessociales2 {
+  width: 4%; }
+
+.redessociales3 {
+  width: 4%; }
+
+footer div {
+  list-style: none;
+  margin-top: 1%;
+  margin-left: none; }
+
+.ul1:hover {
+  transform: translate(10px); }
+
+.ul2:hover {
+  transform: translate(10px); }
+
+.ul3:hover {
+  transform: translate(10px); }
+
+.menunavegacion {
+  margin-top: 5%;
+  margin-right: 30%;
+  background-color: #fffef5; }
+
 .container-fluid {
   background-color: #fffef5; }
 
@@ -255,58 +296,52 @@
   grid-area: logo2;
   margin-left: 46%; }
 
-#carouselExampleControls {
-  width: 50%;
-  margin-left: 25%;
+.grilla1 {
+  display: grid;
+  grid-template-columns: row;
+  grid-template-areas: "logo1 logo2";
+  background-color: #fffef5; }
+
+.menunavegacion {
   margin-top: 5%;
-  margin-bottom: 5%; }
+  margin-right: 30%;
+  background-color: #fffef5; }
 
-.titulogaleria {
-  grid-area: texto_nosotros1;
-  text-align: center;
-  width: 100%;
-  color: #c98a8a;
-  font-size: 210%;
-  font-family: 'Old Standard TT', serif;
-  margin-top: 2%; }
+.grilla1 {
+  display: grid;
+  grid-template-columns: row;
+  grid-template-areas: "logo1 logo2";
+  background-color: #fffef5; }
 
-.formulario {
-  width: 50%;
-  margin-left: 5%;
-  margin-top: 4%;
-  margin-bottom: 8%; }
+.container-fluid {
+  background-color: #fffef5; }
 
-.titulocontacto {
-  grid-area: texto_nosotros1;
-  text-align: center;
-  width: 100%;
-  color: #c98a8a;
-  font-size: 210%;
-  font-family: 'Old Standard TT', serif;
-  margin-top: 2%; }
+.logo1 {
+  width: 10%;
+  grid-area: logo1; }
 
-.tituloHorarios {
-  color: #c98a8a;
-  font-family: 'Old Standard TT', serif;
-  text-align: center; }
+.logo2 {
+  width: 6%;
+  grid-area: logo2;
+  margin-left: 46%; }
 
-.tablaHorarios {
-  border: 20%;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  margin-left: 32%;
-  text-align: center;
-  border-spacing: 10px;
-  border-collapse: separate; }
+* {
+  padding: 0;
+  margin: 0; }
 
-.filas_columnas {
-  color: #c98a8a;
-  font-family: 'Old Standard TT', serif;
-  font-size: 120%; }
+.body {
+  background-color: #fffef5;
+  height: 100%;
+  width: 100%; }
 
-td {
-  font-family: 'Old Standard TT', serif;
-  color: #fac039; }
+.body1 {
+  background-color: #fffef5;
+  height: 100%;
+  width: 100%; }
+
+.portada {
+  width: 28%;
+  margin-left: 35%; }
 
 @media screen and (max-width: 768px) {
   .grilla_nosotros {
