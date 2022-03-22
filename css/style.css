@@ -10,30 +10,40 @@
 .titulonosotros {
   grid-area: titulonosotros; }
 
-.texto_nosotros2 {
+.texto_nosotros2, .texto_actividades, .texto_nosotros1, .texto_nosotros3 {
   grid-area: texto_nosotros2;
   width: 100%;
   color: rgba(248, 104, 20, 0.842);
-  font-size: 90%;
+  font-size: 110%;
   font-family: "Old Standard TT", serif;
-  margin-right: 10%; }
+  margin-top: 8%;
+  padding-right: 10%;
+  padding-left: 5%;
+  text-align: center; }
 
-.img_nosotros2 {
+.img_nosotros2, .img_nosotros1, .img_nosotros3 {
   grid-area: img_nosotros2;
   width: 60%;
   margin-left: 20%;
   margin-top: 3%; }
 
+.img_nosotros2:hover, .img_nosotros1:hover, .img_nosotros3:hover {
+  transform: scale(1.1, 1.1); }
+
 .img_actividades {
-  width: 80%;
   margin-top: 5%;
-  margin-left: 7%; }
+  margin-left: 15%;
+  width: 60%; }
+
+.img_actividades:hover {
+  transform: scale(1.1, 1.1); }
 
 .texto_actividades {
-  margin-top: 30%;
-  margin-right: 10%;
+  margin-top: 20%;
+  margin-right: 30%;
   animation-duration: 3s;
-  animation-name: slidein; }
+  animation-name: slidein;
+  padding-right: 10%; }
 
 @keyframes slidein {
   from {
@@ -43,35 +53,15 @@
     margin-left: 0%;
     width: 100%; } }
 
-.texto_nosotros1 {
-  grid-area: texto_nosotros1;
-  text-align: center;
-  width: 90%;
+.lista_actividades {
   color: rgba(248, 104, 20, 0.842);
-  font-size: 110%;
-  font-family: "Old Standard TT", serif;
-  margin-top: 10%; }
+  font-family: "Old Standard TT", serif; }
 
 .img_nosotros1 {
-  grid-area: img_nosotros1;
-  width: 60%;
-  margin-left: 20%;
-  margin-top: 5%; }
-
-.texto_nosotros3 {
-  grid-area: texto_nosotros1;
-  text-align: center;
-  width: 90%;
-  color: rgba(248, 104, 20, 0.842);
-  font-size: 110%;
-  font-family: "Old Standard TT", serif;
-  margin-top: 20%; }
+  grid-area: img_nosotros1; }
 
 .img_nosotros3 {
-  grid-area: img_nosotros1;
-  width: 60%;
-  margin-left: 20%;
-  margin-top: 5%; }
+  grid-area: img_nosotros1; }
 
 .grillafotos {
   padding-left: 10%;
@@ -94,16 +84,13 @@ header h2 {
   font-size: 180%;
   text-align: center; }
 
-header p {
-  color: rgba(248, 104, 20, 0.842);
-  font-family: "Old Standard TT", serif;
-  font-size: 130%;
-  text-align: center; }
-
 .frasepresentacion {
-  margin-top: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
+  font-style: "Old Standard TT", serif;
+  color: rgba(248, 104, 20, 0.842);
+  font-size: 110%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
   margin-bottom: 5%; }
 
 .bloque2 {
@@ -111,11 +98,6 @@ header p {
 
 .bloque3 {
   grid-area: bloque3; }
-  .bloque3__fraseindex1 {
-    text-align: center;
-    font-style: "Old Standard TT", serif;
-    color: rgba(248, 104, 20, 0.842);
-    font-size: 110%; }
 
 .btn-primary {
   margin-top: 1%; }
@@ -135,7 +117,7 @@ header p {
     margin-left: 0%;
     width: 100%; } }
 
-.texto_nosotros2 {
+.texto_nosotros2, .texto_actividades, .texto_nosotros1, .texto_nosotros3 {
   animation-duration: 3s;
   animation-name: slidein; }
 
@@ -161,7 +143,11 @@ header p {
 
 .fraseindex1 {
   animation-duration: 3s;
-  animation-name: slidein; }
+  animation-name: slidein;
+  text-align: center;
+  font-style: "Old Standard TT", serif;
+  color: rgba(248, 104, 20, 0.842);
+  font-size: 110%; }
 
 @keyframes slidein {
   from {
@@ -197,8 +183,8 @@ header p {
   color: rgba(248, 104, 20, 0.842); }
 
 #carouselExampleControls {
-  width: 50%;
-  margin-left: 25%;
+  width: 40%;
+  margin-left: 30%;
   margin-top: 5%;
   margin-bottom: 5%; }
 
@@ -219,6 +205,7 @@ header p {
   margin-bottom: 5%;
   margin-top: 5%;
   margin-left: 32%;
+  margin-right: 32%;
   text-align: center;
   border-spacing: 10px;
   border-collapse: separate; }
@@ -232,19 +219,48 @@ td {
   font-family: "Old Standard TT", serif;
   color: rgba(248, 104, 20, 0.842); }
 
+.btnEnviar, .btnBorrar {
+  background-color: #4444f5;
+  color: white;
+  font-family: "sm";
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.btnEnviar:hover, .btnBorrar:hover {
+  transform: scale(1.1, 1.1); }
+
+.btnBorrar {
+  background-color: #f52a2a;
+  color: black;
+  font-family: "sm";
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+/* @if $tamanio == "sm" {
+    width: 100px;
+    height: 100px;
+
+    
+    
+  }
+  @else if $tamanio == "md"{
+    width: 200px;
+    height: 200px;
+  }
+  @else if $tamanio =="lg"{
+    width: 300px;
+    height: 300px;*/
 .footer {
   display: grid;
   grid-template-columns: row;
   grid-template-areas: "bloque1 autor";
   text-align: right; }
 
-.redessociales:hover {
-  transform: scale(1.5, 1.5); }
-
-.redessociales2:hover {
-  transform: scale(1.4, 1.4); }
-
-.redessociales3:hover {
+.redessociales:hover, .redessociales2:hover, .redessociales3:hover {
   transform: scale(1.5, 1.5); }
 
 .bloque1 {
@@ -265,10 +281,12 @@ td {
 .redessociales3 {
   width: 4%; }
 
-footer div {
-  list-style: none;
-  margin-top: 1%;
-  margin-left: none; }
+.footer {
+  margin-top: 5%; }
+  .footer div {
+    list-style: none;
+    margin-top: 1%;
+    margin-left: none; }
 
 .ul1:hover {
   transform: translate(10px); }
@@ -343,12 +361,12 @@ footer div {
   width: 28%;
   margin-left: 35%; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .grilla_nosotros {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "titulonosotros" "img_nosotros2" "texto_nosotros2" "img_nosotros1" "texto_nosotros1";
-    background-color: #f5f5d1; }
+    background-color: #fffef5; }
   .tablaHorarios {
     border: 20%;
     margin-bottom: 15%;
@@ -356,4 +374,11 @@ footer div {
     margin-left: 32%;
     text-align: center;
     border-spacing: 10px;
-    border-collapse: separate; } }
+    border-collapse: separate; }
+  .filas_columnas {
+    color: #c98a8a;
+    font-family: "Old Standard TT", serif;
+    font-size: 120%; }
+  td {
+    font-family: "Old Standard TT", serif;
+    color: rgba(248, 104, 20, 0.842); } }

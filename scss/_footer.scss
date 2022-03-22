@@ -12,11 +12,11 @@
 }
 
 .redessociales2:hover{
-    transform: scale(1.4,1.4);
+    @extend .redessociales:hover;
 }
 
 .redessociales3:hover{
-    transform: scale(1.5,1.5);
+    @extend .redessociales:hover;
 }
 
 
@@ -45,12 +45,14 @@
 }
 
 
-footer{
+.footer{
     div{
         list-style: none;
         margin-top: 1%;
         margin-left: none;
     }
+
+    margin-top: 5%;
 }
 
 

@@ -18,9 +18,13 @@
     grid-area: texto_nosotros2;
     width: 100%;
     color:$colorFrases;
-    font-size: 90%;
+    font-size: 110%;
     font-family: $estilo;
-    margin-right: 10%;
+    margin-top: 8%;
+    padding-right: 10%;
+    padding-left: 5%;
+    text-align: center;
+    
 }
 
 .img_nosotros2{
@@ -31,17 +35,27 @@
     
 }
 
+.img_nosotros2:hover{
+  transform: scale(1.1, 1.1);
+}
+
 .img_actividades{
-  width: 80%;
   margin-top: 5%;
-  margin-left: 7%;
+  margin-left: 15%;
+  width: 60%;
+}
+
+.img_actividades:hover{
+  transform: scale(1.1 , 1.1);
 }
 
 .texto_actividades{
-  margin-top: 30%;
-  margin-right: 10%;
+  margin-top: 20%;
+  margin-right: 30%;
   animation-duration: 3s;
-    animation-name: slidein;
+  animation-name: slidein;
+  padding-right: 10%;
+  @extend .texto_nosotros2;
   }
   
   @keyframes slidein {
@@ -56,39 +70,31 @@
     }
 }
 
+.lista_actividades{
+  color: $colorFrases;
+  font-family: $estilo;
+  
+}
+
 .texto_nosotros1{
-    grid-area: texto_nosotros1;
-    text-align: center;
-    width: 90%;
-    color:$colorFrases;
-    font-size: 110%;
-    font-family: $estilo;
-    margin-top: 10%;
+    @extend .texto_nosotros2;
+    
     
 }
 
 .img_nosotros1{
     grid-area: img_nosotros1;
-    width: 60%;
-    margin-left: 20%;
-    margin-top: 5%;
+    @extend .img_nosotros2;
 }
 
 .texto_nosotros3{
-    grid-area: texto_nosotros1;
-    text-align: center;
-    width: 90%;
-    color:$colorFrases;
-    font-size: 110%;
-    font-family: $estilo;
-    margin-top: 20%;
+    @extend .texto_nosotros2;
+    
 }
 
 .img_nosotros3{
     grid-area: img_nosotros1;
-    width: 60%;
-    margin-left: 20%;
-    margin-top: 5%;
+    @extend .img_nosotros2;
 }
 
 .grillafotos{
@@ -121,20 +127,18 @@ header{
     
   }
 
-  p{
-    color:$colorFrases;
-    font-family: $estilo;
-    font-size: 130%;
-    text-align: center;
-  }
+  
 
   
 }
 
 .frasepresentacion{
-  margin-top: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
+  font-style: $estilo;
+  color: $colorFrases;
+  font-size: 110%; 
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
   margin-bottom: 5%;
 }
 
@@ -146,13 +150,7 @@ header{
 .bloque3{
     grid-area: bloque3;
 
-    &__fraseindex1{
-            text-align: center;
-            font-style: $estilo;
-            color: $colorFrases;
-            font-size: 110%;    
-            
-        }
+    
     
    
 }
@@ -219,6 +217,10 @@ header{
 .fraseindex1{
     animation-duration: 3s;
     animation-name: slidein;
+    text-align: center;
+    font-style: $estilo;
+    color: $colorFrases;
+    font-size: 110%;  
   }
   
   @keyframes slidein {
@@ -268,8 +270,8 @@ header{
 }
 
 #carouselExampleControls{
-    width: 50%;
-    margin-left: 25%;
+    width: 40%;
+    margin-left: 30%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -297,6 +299,7 @@ header{
     margin-bottom: 5%;
     margin-top: 5%;
     margin-left: 32%;
+    margin-right: 32%;
     text-align: center;
     border-spacing: 10px;
     border-collapse: separate;
@@ -314,3 +317,46 @@ td{
     font-family: $estilo;
     color: $colorFrases;
 }
+
+@mixin botones($bgColor , $colorLetra, $estilo){ 
+  background-color: $bgColor;
+  color: $colorLetra;
+  font-family: $estilo;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+ 
+}
+
+
+.btnEnviar{
+  @include botones(rgb(68, 68, 245) , white ,"sm");
+  
+}
+
+.btnEnviar:hover{
+  transform: scale(1.1 , 1.1);
+  
+}
+
+.btnBorrar{
+  @include botones(rgb(245, 42, 42), black ,"sm");
+  @extend .btnEnviar;
+}
+
+/* @if $tamanio == "sm" {
+    width: 100px;
+    height: 100px;
+
+    
+    
+  }
+  @else if $tamanio == "md"{
+    width: 200px;
+    height: 200px;
+  }
+  @else if $tamanio =="lg"{
+    width: 300px;
+    height: 300px;*/
+
