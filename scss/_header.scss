@@ -5,6 +5,8 @@
 .cuerpo{
   padding-top: 100px;
   width: 100%;
+  overflow-x:hidden;
+  overflow-y:hidden;
 }
 
 .grilla_nosotros{
@@ -60,7 +62,7 @@
 
 .texto_actividades{
   margin-top: 20%;
-  margin-right: 30%;
+  margin-right: 25%;
   padding-right: 10%;
   @extend .texto_nosotros2;
   }
