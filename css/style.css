@@ -1,6 +1,12 @@
 /*Colores*/
 /*Fuentes*/
 /*color*/
+/*estructura general*/
+/*index y actividades*/
+.cuerpo {
+  padding-top: 100px;
+  width: 100%; }
+
 .grilla_nosotros {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -41,21 +47,26 @@
 .texto_actividades {
   margin-top: 20%;
   margin-right: 30%;
-  animation-duration: 3s;
-  animation-name: slidein;
   padding-right: 10%; }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; }
-  to {
-    margin-left: 0%;
-    width: 100%; } }
-
+/*
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  */
 .lista_actividades {
   color: rgba(248, 104, 20, 0.842);
   font-family: "Old Standard TT", serif; }
+
+.listaDos {
+  margin-top: 20%; }
 
 .img_nosotros1 {
   grid-area: img_nosotros1; }
@@ -63,10 +74,7 @@
 .img_nosotros3 {
   grid-area: img_nosotros1; }
 
-.grillafotos {
-  padding-left: 10%;
-  background-color: #fffef5; }
-
+/*fin index y actividades*/
 /*anidaciones*/
 header h1 {
   color: #c98a8a;
@@ -91,7 +99,8 @@ header h2 {
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 5%;
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  text-align: center; }
 
 .bloque2 {
   grid-area: bloque2; }
@@ -104,42 +113,6 @@ header h2 {
 
 .formulario {
   margin-top: 10%; }
-
-.texto_nosotros1 {
-  animation-duration: 3s;
-  animation-name: slidein; }
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; }
-  to {
-    margin-left: 0%;
-    width: 100%; } }
-
-.texto_nosotros2, .texto_actividades, .texto_nosotros1, .texto_nosotros3 {
-  animation-duration: 3s;
-  animation-name: slidein; }
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; }
-  to {
-    margin-left: 0%;
-    width: 100%; } }
-
-.texto_nosotros3 {
-  animation-duration: 3s;
-  animation-name: slidein; }
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; }
-  to {
-    margin-left: 0%;
-    width: 100%; } }
 
 .fraseindex1 {
   animation-duration: 3s;
@@ -165,32 +138,30 @@ header h2 {
   margin-left: 20%;
   margin-right: 20%; }
 
-.descripcionyoga {
-  animation-duration: 3s;
-  animation-name: slidein; }
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; }
-  to {
-    margin-left: 0%;
-    width: 100%; } }
+/*galeria*/
+.grillafotos {
+  padding-left: 10%;
+  background-color: #fffef5; }
 
 .piefotos {
   text-align: center;
   font-style: "Old Standard TT", serif;
   color: rgba(248, 104, 20, 0.842); }
 
-#carouselExampleControls {
-  width: 40%;
-  margin-left: 30%;
-  margin-top: 5%;
-  margin-bottom: 5%; }
+#carouselExampleCaptions {
+  margin-left: 20%;
+  height: 50%;
+  width: 60%;
+  margin-top: 5%; }
+
+.galeria1 {
+  height: 50%;
+  width: 100%; }
 
 .titulogaleria {
   grid-area: texto_nosotros1; }
 
+/*contacto*/
 .formulario {
   width: 50%;
   margin-left: 5%;
@@ -199,25 +170,6 @@ header h2 {
 
 .titulocontacto {
   grid-area: texto_nosotros1; }
-
-.tablaHorarios {
-  border: 20%;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  margin-left: 32%;
-  margin-right: 32%;
-  text-align: center;
-  border-spacing: 10px;
-  border-collapse: separate; }
-
-.filas_columnas {
-  color: #c98a8a;
-  font-family: "Old Standard TT", serif;
-  font-size: 120%; }
-
-td {
-  font-family: "Old Standard TT", serif;
-  color: rgba(248, 104, 20, 0.842); }
 
 .btnEnviar, .btnBorrar {
   background-color: #4444f5;
@@ -240,20 +192,27 @@ td {
   padding-top: 5px;
   padding-bottom: 5px; }
 
-/* @if $tamanio == "sm" {
-    width: 100px;
-    height: 100px;
+/*horarios*/
+.areatabla {
+  display: flex;
+  justify-content: center; }
 
-    
-    
-  }
-  @else if $tamanio == "md"{
-    width: 200px;
-    height: 200px;
-  }
-  @else if $tamanio =="lg"{
-    width: 300px;
-    height: 300px;*/
+.tablaHorarios {
+  border: 20%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border-spacing: 10px;
+  border-collapse: separate; }
+
+.filas_columnas {
+  color: #c98a8a;
+  font-family: "Old Standard TT", serif;
+  font-size: 120%; }
+
+td {
+  font-family: "Old Standard TT", serif;
+  color: rgba(248, 104, 20, 0.842); }
+
 .footer {
   display: grid;
   grid-template-columns: row;
@@ -318,7 +277,10 @@ td {
   display: grid;
   grid-template-columns: row;
   grid-template-areas: "logo1 logo2";
-  background-color: #fffef5; }
+  background-color: #fffef5;
+  width: 100%;
+  position: fixed;
+  z-index: 100; }
 
 .menunavegacion {
   margin-top: 5%;

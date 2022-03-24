@@ -1,3 +1,11 @@
+/*estructura general*/
+
+/*index y actividades*/
+
+.cuerpo{
+  padding-top: 100px;
+  width: 100%;
+}
 
 .grilla_nosotros{
     display: grid;
@@ -47,17 +55,16 @@
 
 .img_actividades:hover{
   transform: scale(1.1 , 1.1);
+  
 }
 
 .texto_actividades{
   margin-top: 20%;
   margin-right: 30%;
-  animation-duration: 3s;
-  animation-name: slidein;
   padding-right: 10%;
   @extend .texto_nosotros2;
   }
-  
+  /*
   @keyframes slidein {
     from {
       margin-left: 100%;
@@ -68,12 +75,17 @@
       margin-left: 0%;
       width: 100%;
     }
-}
+  */
+
 
 .lista_actividades{
   color: $colorFrases;
   font-family: $estilo;
   
+}
+
+.listaDos{
+  margin-top: 20%;
 }
 
 .texto_nosotros1{
@@ -97,11 +109,10 @@
     @extend .img_nosotros2;
 }
 
-.grillafotos{
-    padding-left: 10%;
-    background-color: $colorBackground;
-    
-}
+/*fin index y actividades*/
+
+
+
 
 /*anidaciones*/ 
 
@@ -140,7 +151,10 @@ header{
   margin-right: 20%;
   margin-top: 5%;
   margin-bottom: 5%;
+  text-align: center;
 }
+
+
 
 .bloque2{
     grid-area: bloque2;
@@ -164,56 +178,8 @@ header{
 .formulario{
     margin-top: 10%;
 }
-.texto_nosotros1{
-    animation-duration: 3s;
-    animation-name: slidein;
-  }
-  
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-}
 
-.texto_nosotros2{
-    animation-duration: 3s;
-    animation-name: slidein;
-  }
-  
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-}
 
-.texto_nosotros3{
-    animation-duration: 3s;
-    animation-name: slidein;
-  }
-  
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-}
 .fraseindex1{
     animation-duration: 3s;
     animation-name: slidein;
@@ -245,35 +211,36 @@ header{
     
 }
 
-.descripcionyoga {
-    animation-duration: 3s;
-    animation-name: slidein;
-  }
-  
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
-  
 
+
+/*galeria*/  
+
+  .grillafotos{
+    padding-left: 10%;
+    background-color: $colorBackground;
+    
+  }
 .piefotos{
     text-align: center;
     font-style: $estilo;
     color: $colorFrases;
 }
 
-#carouselExampleControls{
-    width: 40%;
-    margin-left: 30%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+
+#carouselExampleCaptions{
+   margin-left: 20%;
+   height: 50%;
+   width: 60%;
+   margin-top: 5%;
+   
+   
+    
+}
+
+
+.galeria1{
+  height: 50%;
+  width: 100%;
 }
 
 
@@ -281,6 +248,8 @@ header{
     grid-area: texto_nosotros1;
     
 }
+
+/*contacto*/
 
 .formulario{
     width: 50%;
@@ -292,30 +261,6 @@ header{
 .titulocontacto{
     grid-area: texto_nosotros1;
     
-}
-
-.tablaHorarios{
-    border: 20%;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    margin-left: 32%;
-    margin-right: 32%;
-    text-align: center;
-    border-spacing: 10px;
-    border-collapse: separate;
-    
-}
-
-
-.filas_columnas{
-    color:rgb(201, 138, 138);
-    font-family: $estilo;
-    font-size: 120%;
-}
-
-td{
-    font-family: $estilo;
-    color: $colorFrases;
 }
 
 @mixin botones($bgColor , $colorLetra, $estilo){ 
@@ -345,18 +290,38 @@ td{
   @extend .btnEnviar;
 }
 
-/* @if $tamanio == "sm" {
-    width: 100px;
-    height: 100px;
 
+/*horarios*/
+
+.areatabla{
+  display: flex;
+  justify-content: center;
+
+}
+.tablaHorarios{
+    border: 20%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    border-spacing: 10px;
+    border-collapse: separate;
     
     
-  }
-  @else if $tamanio == "md"{
-    width: 200px;
-    height: 200px;
-  }
-  @else if $tamanio =="lg"{
-    width: 300px;
-    height: 300px;*/
+    
+}
+
+
+.filas_columnas{
+    color:rgb(201, 138, 138);
+    font-family: $estilo;
+    font-size: 120%;
+}
+
+td{
+    font-family: $estilo;
+    color: $colorFrases;
+}
+
+
+
+
 
