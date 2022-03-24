@@ -49,18 +49,6 @@
   margin-right: 30%;
   padding-right: 10%; }
 
-/*
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  */
 .lista_actividades {
   color: rgba(252, 122, 0, 0.842);
   font-family: "Old Standard TT", serif; }
