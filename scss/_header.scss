@@ -17,7 +17,8 @@
     "img_nosotros2 texto_nosotros2"
     "img_nosotros1 texto_nosotros1"
     "img_nosotros3 texto_nosotros3"; 
-    background-color:$colorBackground ;
+    background-color: $colorBackgroundNosotros ;
+
 }
 
 .titulonosotros{
@@ -145,6 +146,21 @@ header{
   text-align: center;
 }
 
+.botonactividades{
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: $colorBackgroundNosotros;
+  font-style: $estilo;
+  color: $colorFrases;
+  margin-left: 42%;
+  margin-bottom: 5%;
+  
+}
+
+
+
 
 
 .bloque2{
@@ -217,12 +233,122 @@ header{
     color: $colorFrases;
 }
 
+.grillagaleria{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 400px;
+  grid-template-areas: 
+  "contenedor_img1 contenedor_img2 contenedor_img3"
+  "contenedor_img4 contenedor_img5 contenedor_img6";
+  padding: 5%;
+  grid-gap: 10px;
+
+}
+
+.contenedor_img1{
+  grid-area: contenedor_img1 ;
+  width: 100%;
+  height: 100%;
+  
+}
+.contenedor_img2{
+  grid-area: contenedor_img2 ;
+  width: 100%;
+  height: 100%;
+  
+}
+.contenedor_img3{
+  grid-area: contenedor_img3 ;
+  width: 100%;
+  height: 100%;
+  
+}
+.contenedor_img4{
+  grid-area: contenedor_img4 ;
+  width: 100%;
+  height: 100%;
+  
+}
+.contenedor_img5{
+  grid-area: contenedor_img5 ;
+  width: 100%;
+  height: 100%;
+  
+}
+.contenedor_img6{
+  grid-area: contenedor_img6 ;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.img_grilla1{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img_grilla2{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+.img_grilla3{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img_grilla4{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img_grilla5{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img_grilla6{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img_grilla1:hover{
+  transform: scale(1.03 , 1.03);
+}
+
+.img_grilla2:hover{
+  transform: scale(1.03 , 1.03);
+}
+
+.img_grilla3:hover{
+  transform: scale(1.03 , 1.03);
+}
+
+.img_grilla4:hover{
+  transform: scale(1.03 , 1.03);
+}
+
+.img_grilla5:hover{
+  transform: scale(1.03 , 1.03);
+}
+
+.img_grilla6:hover{
+  transform: scale(1.03 , 1.03);
+}
+
+
+
 
 #carouselExampleCaptions{
    margin-left: 20%;
    height: 50%;
    width: 60%;
-   margin-top: 5%;
+   margin-top: 1%;
    
    
     
@@ -262,12 +388,14 @@ header{
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-style: $estilo;
+  
  
 }
 
 
 .btnEnviar{
-  @include botones(rgb(68, 68, 245) , white ,"sm");
+  @include botones(rgb(185, 185, 224) , rgb(0, 0, 0) ,"sm");
   
 }
 
@@ -277,7 +405,7 @@ header{
 }
 
 .btnBorrar{
-  @include botones(rgb(245, 42, 42), black ,"sm");
+  @include botones(rgb(207, 95, 95), black ,"sm");
   @extend .btnEnviar;
 }
 
@@ -287,6 +415,7 @@ header{
 .areatabla{
   display: flex;
   justify-content: center;
+  width: 100%;
 
 }
 .tablaHorarios{
@@ -295,6 +424,7 @@ header{
     margin-top: 5%;
     border-spacing: 10px;
     border-collapse: separate;
+
     
     
     
