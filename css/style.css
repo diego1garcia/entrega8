@@ -453,4 +453,14 @@ td {
     grid-area: autor;
     height: 30%;
     padding-top: 9%;
-    padding-right: 3%; } }
+    padding-right: 3%; }
+  .botonactividades {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #f8ecec;
+    font-style: "Old Standard TT", serif;
+    color: rgba(252, 122, 0, 0.842);
+    margin-left: 38%;
+    margin-bottom: 5%; } }
